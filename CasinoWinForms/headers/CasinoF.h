@@ -43,7 +43,10 @@ namespace CasinoWinForms {
 
 	private: System::Windows::Forms::Label^ StartMenu_label;
 	private: System::Windows::Forms::Button^ Exit_button;
-	private: System::Windows::Forms::Button^ button1;
+
+	private: System::Windows::Forms::MenuStrip^ menuStrip1;
+	private: System::Windows::Forms::ToolStripMenuItem^ aboutToolStripMenuItem;
+
 
 	protected:
 
@@ -51,7 +54,7 @@ namespace CasinoWinForms {
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -63,7 +66,9 @@ namespace CasinoWinForms {
 			this->Play_button = (gcnew System::Windows::Forms::Button());
 			this->StartMenu_label = (gcnew System::Windows::Forms::Label());
 			this->Exit_button = (gcnew System::Windows::Forms::Button());
-			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
+			this->aboutToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->menuStrip1->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// Play_button
@@ -102,21 +107,21 @@ namespace CasinoWinForms {
 			this->Exit_button->UseVisualStyleBackColor = true;
 			this->Exit_button->Click += gcnew System::EventHandler(this, &CasinoF::Exit_button_Click);
 			// 
-			// button1
+			// menuStrip1
 			// 
-			this->button1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(120)), static_cast<System::Int32>(static_cast<System::Byte>(41)),
-				static_cast<System::Int32>(static_cast<System::Byte>(7)));
-			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->button1->ForeColor = System::Drawing::SystemColors::Control;
-			this->button1->Location = System::Drawing::Point(452, 12);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(20, 20);
-			this->button1->TabIndex = 3;
-			this->button1->Text = L"X";
-			this->button1->UseVisualStyleBackColor = false;
-			this->button1->Click += gcnew System::EventHandler(this, &CasinoF::button1_Click);
+			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->aboutToolStripMenuItem });
+			this->menuStrip1->Location = System::Drawing::Point(0, 0);
+			this->menuStrip1->Name = L"menuStrip1";
+			this->menuStrip1->Size = System::Drawing::Size(484, 24);
+			this->menuStrip1->TabIndex = 4;
+			this->menuStrip1->Text = L"menuStrip1";
+			// 
+			// aboutToolStripMenuItem
+			// 
+			this->aboutToolStripMenuItem->Name = L"aboutToolStripMenuItem";
+			this->aboutToolStripMenuItem->Size = System::Drawing::Size(61, 20);
+			this->aboutToolStripMenuItem->Text = L"About...";
+			this->aboutToolStripMenuItem->Click += gcnew System::EventHandler(this, &CasinoF::aboutToolStripMenuItem_Click);
 			// 
 			// CasinoF
 			// 
@@ -125,29 +130,33 @@ namespace CasinoWinForms {
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(69)), static_cast<System::Int32>(static_cast<System::Byte>(69)),
 				static_cast<System::Int32>(static_cast<System::Byte>(69)));
 			this->ClientSize = System::Drawing::Size(484, 461);
-			this->Controls->Add(this->button1);
 			this->Controls->Add(this->Exit_button);
 			this->Controls->Add(this->StartMenu_label);
 			this->Controls->Add(this->Play_button);
+			this->Controls->Add(this->menuStrip1);
 			this->ForeColor = System::Drawing::SystemColors::ControlText;
-			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::Fixed3D;
+			this->MainMenuStrip = this->menuStrip1;
+			this->MaximizeBox = false;
 			this->Name = L"CasinoF";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Casino";
+			this->menuStrip1->ResumeLayout(false);
+			this->menuStrip1->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
 	private: System::Void Play_button_Click(System::Object^ sender, System::EventArgs^ e) {
-	
+		Exit_button->Hide();
+		Play_button->Hide();
 	}
 	private: System::Void Exit_button_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Close();
 	}
-
-private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-	this->Close();
-}
-};
+	private: System::Void aboutToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+		MessageBox::Show(this, "Casino WinForms version\nGIT: https://github.com/Zeerhiy\nE-MAIL: igressikk@gmail.com", "Info", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	}
+	};
 }
