@@ -127,12 +127,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="headers\CasinoF.cpp" />
-    <ClCompile Include="headers\CasinoMenu.cpp" />
-    <ClCompile Include="headers\CreateGuestF.cpp" />
-    <ClCompile Include="headers\GuestF.cpp" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="headers\CasinoF.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -166,6 +160,12 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="src\icons\icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\CasinoF.cpp" />
+    <ClCompile Include="src\CasinoMenu.cpp" />
+    <ClCompile Include="src\CreateGuestF.cpp" />
+    <ClCompile Include="src\GuestF.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

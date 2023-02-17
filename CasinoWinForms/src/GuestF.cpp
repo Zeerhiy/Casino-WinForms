@@ -1,4 +1,4 @@
-#include "GuestF.h"
+#include "../headers/GuestF.h"
 
 System::Void CasinoWinForms::GuestF::GoCasino_button_Click(System::Object^ sender, System::EventArgs^ e)
 {

@@ -1,4 +1,4 @@
-#include "CreateGuestF.h"
+#include "../headers/CreateGuestF.h"
 
 System::Void CasinoWinForms::CreateGuestF::Manual_button_Click(System::Object^ sender, System::EventArgs^ e)
 {

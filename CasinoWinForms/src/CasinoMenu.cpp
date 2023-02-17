@@ -1,4 +1,4 @@
-#include "CasinoMenu.h"
+#include "../headers/CasinoMenu.h"
 
 System::Void CasinoWinForms::CasinoMenu::backToTheGuestMenuToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e)
 {
