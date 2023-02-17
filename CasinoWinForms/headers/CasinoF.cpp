@@ -1,4 +1,7 @@
 #include "../headers/CasinoF.h"
+#include "../headers/CreateGuestF.h"
+
+
 
 using namespace System;
 using namespace System::Windows::Forms;
@@ -9,6 +12,12 @@ int main(array<String^>^) {
 	Application::EnableVisualStyles();
 	CasinoWinForms::CasinoF form;
 	Application::Run(% form);
-	
+
 }
 
+System::Void CasinoWinForms::CasinoF::Play_button_Click(System::Object^ sender, System::EventArgs^ e)
+{
+	CreateGuestF^ form = gcnew CreateGuestF();
+	this->Hide();
+	form->Show();
+}

@@ -63,6 +63,7 @@ namespace CasinoWinForms {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(CasinoF::typeid));
 			this->Play_button = (gcnew System::Windows::Forms::Button());
 			this->StartMenu_label = (gcnew System::Windows::Forms::Label());
 			this->Exit_button = (gcnew System::Windows::Forms::Button());
@@ -88,7 +89,7 @@ namespace CasinoWinForms {
 			this->StartMenu_label->AutoSize = true;
 			this->StartMenu_label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 48, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->StartMenu_label->ForeColor = System::Drawing::Color::White;
+			this->StartMenu_label->ForeColor = System::Drawing::Color::Black;
 			this->StartMenu_label->Location = System::Drawing::Point(111, 125);
 			this->StartMenu_label->Name = L"StartMenu_label";
 			this->StartMenu_label->Size = System::Drawing::Size(278, 73);
@@ -127,8 +128,7 @@ namespace CasinoWinForms {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(69)), static_cast<System::Int32>(static_cast<System::Byte>(69)),
-				static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->BackColor = System::Drawing::SystemColors::Control;
 			this->ClientSize = System::Drawing::Size(484, 461);
 			this->Controls->Add(this->Exit_button);
 			this->Controls->Add(this->StartMenu_label);
@@ -140,7 +140,7 @@ namespace CasinoWinForms {
 			this->MaximizeBox = false;
 			this->Name = L"CasinoF";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
-			this->Text = L"Casino";
+			this->Text = L"MainMenu";
 			this->menuStrip1->ResumeLayout(false);
 			this->menuStrip1->PerformLayout();
 			this->ResumeLayout(false);
@@ -148,15 +148,8 @@ namespace CasinoWinForms {
 
 		}
 #pragma endregion
-	private: System::Void Play_button_Click(System::Object^ sender, System::EventArgs^ e) {
-		Exit_button->Hide();
-		Play_button->Hide();
-	}
-	private: System::Void Exit_button_Click(System::Object^ sender, System::EventArgs^ e) {
-		this->Close();
-	}
-	private: System::Void aboutToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
-		MessageBox::Show(this, "Casino WinForms version\nGIT: https://github.com/Zeerhiy\nE-MAIL: igressikk@gmail.com", "Info", MessageBoxButtons::OK, MessageBoxIcon::Information);
-	}
+	private: System::Void Play_button_Click(System::Object^ sender, System::EventArgs^ e);
+	private: System::Void Exit_button_Click(System::Object^ sender, System::EventArgs^ e) { Application::Exit(); }
+	private: System::Void aboutToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {MessageBox::Show(this, "Casino WinForms version\nGIT: https://github.com/Zeerhiy\nE-MAIL: igressikk@gmail.com", "Info", MessageBoxButtons::OK, MessageBoxIcon::Information);}
 	};
 }

@@ -127,10 +127,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="headers\CasinoF.cpp" />
+    <ClCompile Include="headers\CasinoMenu.cpp" />
+    <ClCompile Include="headers\CreateGuestF.cpp" />
+    <ClCompile Include="headers\GuestF.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="headers\CasinoF.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="headers\CasinoMenu.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="headers\CreateGuestF.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="headers\GuestF.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="resource.h" />
@@ -138,6 +150,15 @@
   <ItemGroup>
     <EmbeddedResource Include="headers\CasinoF.resx">
       <DependentUpon>headers\CasinoF.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="headers\CasinoMenu.resx">
+      <DependentUpon>headers\CasinoMenu.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="headers\CreateGuestF.resx">
+      <DependentUpon>headers\CreateGuestF.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="headers\GuestF.resx">
+      <DependentUpon>headers\GuestF.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
