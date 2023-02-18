@@ -32,6 +32,7 @@ System::Void CasinoWinForms::CreateGuestF::Manual_button_Click(System::Object^ s
 	guest.SetGuestName(t_name);
 	guest.SetGuestAge(t_age);
 	guest.SetGuestCash(t_cash);
+	guest.SetGuestTokens(0);
 
 	GuestF^ form = gcnew GuestF();
 	this->Hide();
@@ -69,6 +70,7 @@ System::Void CasinoWinForms::CreateGuestF::Randomize_button_Click(System::Object
 
 	guest.SetGuestAge(t_age);
 	guest.SetGuestCash(t_cash);
+	guest.SetGuestTokens(0);
 
 	GuestF^ form = gcnew GuestF();
 	this->Hide();

@@ -4,9 +4,19 @@ extern Guest guest;
 
 System::Void CasinoWinForms::GuestF::GoCasino_button_Click(System::Object^ sender, System::EventArgs^ e)
 {
-	CasinoMenu^ form = gcnew CasinoMenu();
-	this->Hide();
-	form->Show();
+	if (guest.GetGuestAge() < 18) {
+		if (MessageBox::Show("You are still too young to gamble. Are you sure you want to continue?", "Warning", MessageBoxButtons::YesNo) != System::Windows::Forms::DialogResult::No) {
+			CasinoMenu^ form = gcnew CasinoMenu();
+			this->Hide();
+			form->Show();
+		}
+		else return;
+	}
+	else {
+		CasinoMenu^ form = gcnew CasinoMenu();
+		this->Hide();
+		form->Show();
+	}
 }
 
 System::Void CasinoWinForms::GuestF::exitToTheCreateGuestMenuToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e)
