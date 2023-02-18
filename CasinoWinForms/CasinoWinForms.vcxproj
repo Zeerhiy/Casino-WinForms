@@ -136,6 +136,7 @@
     <ClInclude Include="headers\CreateGuestF.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="headers\Funcs.h" />
     <ClInclude Include="headers\GuestF.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -165,6 +166,7 @@
     <ClCompile Include="src\CasinoF.cpp" />
     <ClCompile Include="src\CasinoMenu.cpp" />
     <ClCompile Include="src\CreateGuestF.cpp" />
+    <ClCompile Include="src\Funcs.cpp" />
     <ClCompile Include="src\GuestF.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

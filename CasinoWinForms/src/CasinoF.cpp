@@ -1,5 +1,6 @@
 #include "../headers/CasinoF.h"
 #include "../headers/CreateGuestF.h"
+#include "../headers/Funcs.h"
 
 
 

@@ -30,6 +30,9 @@
     <ClInclude Include="headers\CasinoMenu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="headers\Funcs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="CasinoWinForms.rc">
@@ -52,6 +55,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\GuestF.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Funcs.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

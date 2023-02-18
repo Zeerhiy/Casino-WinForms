@@ -1,5 +1,6 @@
 #pragma once
 #include "CasinoMenu.h"
+#include "Funcs.h"
 
 namespace CasinoWinForms {
 
@@ -124,6 +125,7 @@ namespace CasinoWinForms {
 			this->CheckInfo_button->TabIndex = 3;
 			this->CheckInfo_button->Text = L"Check guest status\r\n";
 			this->CheckInfo_button->UseVisualStyleBackColor = true;
+			this->CheckInfo_button->Click += gcnew System::EventHandler(this, &GuestF::CheckInfo_button_Click);
 			// 
 			// GoCasino_button
 			// 
@@ -162,5 +164,6 @@ namespace CasinoWinForms {
 	private: System::Void GoCasino_button_Click(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void exitTheProgramToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) { Application::Exit(); }
 	private: System::Void exitToTheCreateGuestMenuToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e);
-	};
+	private: System::Void CheckInfo_button_Click(System::Object^ sender, System::EventArgs^ e);
+};
 }
