@@ -70,6 +70,10 @@ void Guest::SetGuestCash(int cash)
 {
 	this->cash = cash;
 }
+void Guest::SetGuestTokens(int tokens)
+{
+	this->tokens = tokens;
+}
 std::string Guest::GetGuestName()
 {
 	return this->name;

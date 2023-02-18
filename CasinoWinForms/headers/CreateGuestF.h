@@ -234,7 +234,7 @@ namespace CasinoWinForms {
 			this->Manual_groupBox->Controls->Add(this->Age_TextBox);
 			this->Manual_groupBox->Controls->Add(this->Name_TextBox);
 			this->Manual_groupBox->Controls->Add(this->Manual_button);
-			this->Manual_groupBox->Location = System::Drawing::Point(9, 112);
+			this->Manual_groupBox->Location = System::Drawing::Point(9, 147);
 			this->Manual_groupBox->Name = L"Manual_groupBox";
 			this->Manual_groupBox->Size = System::Drawing::Size(426, 247);
 			this->Manual_groupBox->TabIndex = 10;

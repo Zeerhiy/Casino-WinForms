@@ -39,6 +39,42 @@ System::Void CasinoWinForms::CreateGuestF::Manual_button_Click(System::Object^ s
 	
 }
 
+System::Void CasinoWinForms::CreateGuestF::Randomize_button_Click(System::Object^ sender, System::EventArgs^ e)
+{
+	std::string t_name;
+	int t_age;
+	int t_cash;
+	srand(static_cast<unsigned int>(time(NULL)));
+	t_age = (rand() % 66) + 14;
+	t_cash = rand() % 1000;
+	int a = rand() % 5;
+	switch (a)
+	{
+	case 0:
+		guest.SetGuestName("Mostavchuk Petro");
+		break;
+	case 1:
+		guest.SetGuestName("Billy Herrington");
+		break;
+	case 2:
+		guest.SetGuestName("Volodymyr Zelenskyy");
+		break;
+	case 3:
+		guest.SetGuestName("Joe Biden");
+		break;
+	case 4:
+		guest.SetGuestName("Lionel Messi");
+		break;
+	}
+
+	guest.SetGuestAge(t_age);
+	guest.SetGuestCash(t_cash);
+
+	GuestF^ form = gcnew GuestF();
+	this->Hide();
+	form->Show();
+}
+
 System::Void CasinoWinForms::CreateGuestF::backToTheMainMenuToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e)
 {
 	CasinoF^ form = gcnew CasinoF();
@@ -46,9 +82,4 @@ System::Void CasinoWinForms::CreateGuestF::backToTheMainMenuToolStripMenuItem_Cl
 	form->Show();
 }
 
-System::Void CasinoWinForms::CreateGuestF::Randomize_button_Click(System::Object^ sender, System::EventArgs^ e)
-{
-	GuestF^ form = gcnew GuestF();
-	this->Hide();
-	form->Show();
-}
+

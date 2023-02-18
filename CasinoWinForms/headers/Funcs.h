@@ -2,6 +2,7 @@
 #define FUNCS
 
 #include <string>
+#include <ctime>
 
 using namespace System;
 using namespace System::Windows::Forms;
@@ -26,14 +27,11 @@ public:
 	void SetGuestName(std::string name);
 	void SetGuestAge(int age);
 	void SetGuestCash(int cash);
+	void SetGuestTokens(int tokens);
 	std::string GetGuestName();
 	int GetGuestAge();
 	int GetGuestCash();
 	int GetGuestTokens();
-
-
-
 };
-
 
 #endif

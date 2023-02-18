@@ -1,6 +1,7 @@
 #pragma once
 #include "CasinoF.h"
 #include "CreateGuestF.h"
+#include "Funcs.h"
 
 namespace CasinoWinForms {
 
@@ -56,6 +57,7 @@ namespace CasinoWinForms {
 	private: System::Windows::Forms::Label^ TokensToCash_label;
 	private: System::Windows::Forms::Label^ CashToTokens_label;
 	private: System::Windows::Forms::GroupBox^ Roulette_groupBox;
+
 
 	private:
 		/// <summary>
@@ -228,6 +230,7 @@ namespace CasinoWinForms {
 			this->TokensToCash_textBox->Name = L"TokensToCash_textBox";
 			this->TokensToCash_textBox->Size = System::Drawing::Size(137, 20);
 			this->TokensToCash_textBox->TabIndex = 5;
+			this->TokensToCash_textBox->Text = L"0";
 			// 
 			// CashToTokens_textBox
 			// 
@@ -235,6 +238,7 @@ namespace CasinoWinForms {
 			this->CashToTokens_textBox->Name = L"CashToTokens_textBox";
 			this->CashToTokens_textBox->Size = System::Drawing::Size(137, 20);
 			this->CashToTokens_textBox->TabIndex = 4;
+			this->CashToTokens_textBox->Text = L"0";
 			// 
 			// TokensToCash_button
 			// 
@@ -244,6 +248,7 @@ namespace CasinoWinForms {
 			this->TokensToCash_button->TabIndex = 3;
 			this->TokensToCash_button->Text = L"Exchange";
 			this->TokensToCash_button->UseVisualStyleBackColor = true;
+			this->TokensToCash_button->Click += gcnew System::EventHandler(this, &CasinoMenu::TokensToCash_button_Click);
 			// 
 			// CashToTokens_button
 			// 
@@ -253,6 +258,7 @@ namespace CasinoWinForms {
 			this->CashToTokens_button->TabIndex = 2;
 			this->CashToTokens_button->Text = L"Exchange";
 			this->CashToTokens_button->UseVisualStyleBackColor = true;
+			this->CashToTokens_button->Click += gcnew System::EventHandler(this, &CasinoMenu::CashToTokens_button_Click);
 			// 
 			// TokensToCash_label
 			// 
@@ -301,6 +307,7 @@ namespace CasinoWinForms {
 			this->Name = L"CasinoMenu";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"CasinoMenu";
+			this->Load += gcnew System::EventHandler(this, &CasinoMenu::CasinoMenu_Load);
 			this->menuStrip1->ResumeLayout(false);
 			this->menuStrip1->PerformLayout();
 			this->Info_groupBox->ResumeLayout(false);
@@ -315,5 +322,8 @@ namespace CasinoWinForms {
 	private: System::Void aboutToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {MessageBox::Show(this, "Casino WinForms version\nGIT: https://github.com/Zeerhiy\nE-MAIL: igressikk@gmail.com", "Info", MessageBoxButtons::OK, MessageBoxIcon::Information);}
 private: System::Void exitTheProgramToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {Application::Exit();}
 private: System::Void backToTheGuestMenuToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e);
+private: System::Void CasinoMenu_Load(System::Object^ sender, System::EventArgs^ e);
+private: System::Void CashToTokens_button_Click(System::Object^ sender, System::EventArgs^ e);
+private: System::Void TokensToCash_button_Click(System::Object^ sender, System::EventArgs^ e);
 };
 }

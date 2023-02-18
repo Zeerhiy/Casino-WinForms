@@ -141,6 +141,7 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="resource.h" />
+    <ClInclude Include="resource1.h" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="headers\CasinoF.resx">
@@ -157,17 +158,18 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="CasinoWinForms.rc" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="src\icons\icon.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="src\CasinoF.cpp" />
     <ClCompile Include="src\CasinoMenu.cpp" />
     <ClCompile Include="src\CreateGuestF.cpp" />
     <ClCompile Include="src\Funcs.cpp" />
     <ClCompile Include="src\GuestF.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="CasinoWinForms.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="src\images\icon.ico" />
+    <Image Include="src\images\pic.bmp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
