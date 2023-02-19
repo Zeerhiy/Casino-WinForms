@@ -62,6 +62,7 @@ namespace CasinoWinForms {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(GuestF::typeid));
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->exitToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->exitToTheCreateGuestMenuToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());

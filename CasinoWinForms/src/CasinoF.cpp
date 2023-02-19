@@ -14,6 +14,7 @@ int main(array<String^>^) {
 	CasinoWinForms::CasinoF form;
 	Application::Run(% form);
 
+
 }
 
 System::Void CasinoWinForms::CasinoF::Play_button_Click(System::Object^ sender, System::EventArgs^ e)
