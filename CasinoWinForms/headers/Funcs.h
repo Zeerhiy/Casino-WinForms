@@ -32,6 +32,8 @@ public:
 	int GetGuestAge();
 	int GetGuestCash();
 	int GetGuestTokens();
+	void AddGuestTokens(int tokens);
+	void SubGuestTokens(int tokens);
 };
 
 #endif

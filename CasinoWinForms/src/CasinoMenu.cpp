@@ -2,6 +2,13 @@
 
 extern Guest guest;
 
+void CasinoWinForms::CasinoMenu::UpdateInfo()
+{
+	Cash_label1->Text = Convert::ToString(guest.GetGuestCash());
+	Tokens_label1->Text = Convert::ToString(guest.GetGuestTokens());
+}
+
+
 System::Void CasinoWinForms::CasinoMenu::backToTheGuestMenuToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e)
 {
 	GuestF^ form = gcnew GuestF();
@@ -12,10 +19,7 @@ System::Void CasinoWinForms::CasinoMenu::backToTheGuestMenuToolStripMenuItem_Cli
 System::Void CasinoWinForms::CasinoMenu::CasinoMenu_Load(System::Object^ sender, System::EventArgs^ e)
 {
 
-	Cash_label1->Text = Convert::ToString(guest.GetGuestCash());
-	Tokens_label1->Text = Convert::ToString(guest.GetGuestTokens());
-
-
+	UpdateInfo();
 }
 
 System::Void CasinoWinForms::CasinoMenu::CashToTokens_button_Click(System::Object^ sender, System::EventArgs^ e)
@@ -37,8 +41,7 @@ System::Void CasinoWinForms::CasinoMenu::CashToTokens_button_Click(System::Objec
 	guest.SetGuestCash(guest.GetGuestCash() - temp_int);
 	guest.SetGuestTokens(guest.GetGuestTokens() + temp_int);
 
-	Cash_label1->Text = Convert::ToString(guest.GetGuestCash());
-	Tokens_label1->Text = Convert::ToString(guest.GetGuestTokens());
+	UpdateInfo();
 }
 
 System::Void CasinoWinForms::CasinoMenu::TokensToCash_button_Click(System::Object^ sender, System::EventArgs^ e)
@@ -60,8 +63,7 @@ System::Void CasinoWinForms::CasinoMenu::TokensToCash_button_Click(System::Objec
 	guest.SetGuestCash(guest.GetGuestCash() + temp_int);
 	guest.SetGuestTokens(guest.GetGuestTokens() - temp_int);
 
-	Cash_label1->Text = Convert::ToString(guest.GetGuestCash());
-	Tokens_label1->Text = Convert::ToString(guest.GetGuestTokens());
+	UpdateInfo();
 }
 
 System::Void CasinoWinForms::CasinoMenu::Bet_button_Click(System::Object^ sender, System::EventArgs^ e)
@@ -70,7 +72,7 @@ System::Void CasinoWinForms::CasinoMenu::Bet_button_Click(System::Object^ sender
 	int temp_int = 0;
 	for (unsigned i = 0; i < Bet_textBox->TextLength; i++)
 	{
-		if (!isdigit(Bet_textBox->Text[i]) || Bet_textBox->Text[i] == '0')
+		if (!isdigit(Bet_textBox->Text[i]) || Bet_textBox->Text == "0")
 		{
 			MessageBox::Show("Expression must be a natural number", "Warning", MessageBoxButtons::OK, MessageBoxIcon::Warning);
 			return;
@@ -84,18 +86,52 @@ System::Void CasinoWinForms::CasinoMenu::Bet_button_Click(System::Object^ sender
 	if (winlot == 0)
 	{
 		WinningLot_label->Text = Convert::ToString(winlot);
-		WinningLotText_label->ForeColor = Color::ForestGreen;
+		WinningLot_label->ForeColor = Color::ForestGreen;
+		if (Green_radioButton->Checked)
+		{
+			guest.AddGuestTokens(temp_int * 16);
+			UpdateInfo();
+			MessageBox::Show("You won " + Convert::ToString(temp_int*16) + " TOKENS!!CONGRATZ", "GREEEEEEEEN", MessageBoxButtons::OK, MessageBoxIcon::Information);
+		}
+		else {
+			guest.SubGuestTokens(temp_int);
+			UpdateInfo();
+			MessageBox::Show("You lost :(", "Maybe try again?", MessageBoxButtons::OK, MessageBoxIcon::Information);
+		}
+
 	}
 	else if (winlot % 2 == 1)
 	{
 		WinningLot_label->Text = Convert::ToString(winlot);
-		WinningLotText_label->ForeColor = Color::DarkRed;
+		WinningLot_label->ForeColor = Color::DarkRed;
+		if (Red_radioButton->Checked)
+		{
+			guest.AddGuestTokens(temp_int * 2);
+			UpdateInfo();
+			MessageBox::Show("You won " + Convert::ToString(temp_int*2) + " tokens!", "Red", MessageBoxButtons::OK, MessageBoxIcon::Information);
+		}
+		else {
+			guest.SubGuestTokens(temp_int);
+			UpdateInfo();
+			MessageBox::Show("You lost :(", "Maybe try again?", MessageBoxButtons::OK, MessageBoxIcon::Information);
+		}
 
 	}
 	else if (winlot % 2 == 0)
 	{
 		WinningLot_label->Text = Convert::ToString(winlot);
-		WinningLotText_label->ForeColor = Color::Black;
+		WinningLot_label->ForeColor = Color::Black;
+		if (Black_radioButton->Checked)
+		{
+			guest.AddGuestTokens(temp_int * 2);
+			UpdateInfo();
+			MessageBox::Show("You won " + Convert::ToString(temp_int*2) + " tokens!", "Black", MessageBoxButtons::OK, MessageBoxIcon::Information);
+		}
+		else {
+			guest.SubGuestTokens(temp_int);
+			UpdateInfo();
+			MessageBox::Show("You lost :(", "Maybe try again?", MessageBoxButtons::OK, MessageBoxIcon::Information);
+		}
 	}
 
 }

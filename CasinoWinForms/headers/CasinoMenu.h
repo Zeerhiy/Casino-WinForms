@@ -106,15 +106,15 @@ namespace CasinoWinForms {
 			this->TokensToCash_label = (gcnew System::Windows::Forms::Label());
 			this->CashToTokens_label = (gcnew System::Windows::Forms::Label());
 			this->Roulette_groupBox = (gcnew System::Windows::Forms::GroupBox());
-			this->Bet_label = (gcnew System::Windows::Forms::Label());
-			this->Bet_textBox = (gcnew System::Windows::Forms::TextBox());
-			this->Choice_label = (gcnew System::Windows::Forms::Label());
-			this->Red_radioButton = (gcnew System::Windows::Forms::RadioButton());
-			this->Black_radioButton = (gcnew System::Windows::Forms::RadioButton());
-			this->Green_radioButton = (gcnew System::Windows::Forms::RadioButton());
-			this->Bet_button = (gcnew System::Windows::Forms::Button());
-			this->WinningLotText_label = (gcnew System::Windows::Forms::Label());
 			this->WinningLot_label = (gcnew System::Windows::Forms::Label());
+			this->WinningLotText_label = (gcnew System::Windows::Forms::Label());
+			this->Bet_button = (gcnew System::Windows::Forms::Button());
+			this->Green_radioButton = (gcnew System::Windows::Forms::RadioButton());
+			this->Black_radioButton = (gcnew System::Windows::Forms::RadioButton());
+			this->Red_radioButton = (gcnew System::Windows::Forms::RadioButton());
+			this->Choice_label = (gcnew System::Windows::Forms::Label());
+			this->Bet_textBox = (gcnew System::Windows::Forms::TextBox());
+			this->Bet_label = (gcnew System::Windows::Forms::Label());
 			this->menuStrip1->SuspendLayout();
 			this->Info_groupBox->SuspendLayout();
 			this->groupBox1->SuspendLayout();
@@ -326,68 +326,27 @@ namespace CasinoWinForms {
 			this->Roulette_groupBox->TabStop = false;
 			this->Roulette_groupBox->Text = L"Roulette";
 			// 
-			// Bet_label
+			// WinningLot_label
 			// 
-			this->Bet_label->AutoSize = true;
-			this->Bet_label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->WinningLot_label->AutoSize = true;
+			this->WinningLot_label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->Bet_label->Location = System::Drawing::Point(6, 26);
-			this->Bet_label->Name = L"Bet_label";
-			this->Bet_label->Size = System::Drawing::Size(288, 20);
-			this->Bet_label->TabIndex = 5;
-			this->Bet_label->Text = L"Select the number of tokens to bet";
+			this->WinningLot_label->Location = System::Drawing::Point(360, 74);
+			this->WinningLot_label->Name = L"WinningLot_label";
+			this->WinningLot_label->Size = System::Drawing::Size(46, 31);
+			this->WinningLot_label->TabIndex = 12;
+			this->WinningLot_label->Text = L"__";
 			// 
-			// Bet_textBox
+			// WinningLotText_label
 			// 
-			this->Bet_textBox->Location = System::Drawing::Point(14, 51);
-			this->Bet_textBox->Name = L"Bet_textBox";
-			this->Bet_textBox->Size = System::Drawing::Size(137, 20);
-			this->Bet_textBox->TabIndex = 6;
-			this->Bet_textBox->Text = L"0";
-			// 
-			// Choice_label
-			// 
-			this->Choice_label->AutoSize = true;
-			this->Choice_label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->Choice_label->Location = System::Drawing::Point(6, 74);
-			this->Choice_label->Name = L"Choice_label";
-			this->Choice_label->Size = System::Drawing::Size(298, 20);
-			this->Choice_label->TabIndex = 7;
-			this->Choice_label->Text = L"Choose the color you want to bet on";
-			// 
-			// Red_radioButton
-			// 
-			this->Red_radioButton->AutoSize = true;
-			this->Red_radioButton->Location = System::Drawing::Point(96, 106);
-			this->Red_radioButton->Name = L"Red_radioButton";
-			this->Red_radioButton->Size = System::Drawing::Size(62, 17);
-			this->Red_radioButton->TabIndex = 8;
-			this->Red_radioButton->TabStop = true;
-			this->Red_radioButton->Text = L"Red(2x)";
-			this->Red_radioButton->UseVisualStyleBackColor = true;
-			// 
-			// Black_radioButton
-			// 
-			this->Black_radioButton->AutoSize = true;
-			this->Black_radioButton->Location = System::Drawing::Point(14, 106);
-			this->Black_radioButton->Name = L"Black_radioButton";
-			this->Black_radioButton->Size = System::Drawing::Size(76, 17);
-			this->Black_radioButton->TabIndex = 8;
-			this->Black_radioButton->TabStop = true;
-			this->Black_radioButton->Text = L"BLACK(2x)";
-			this->Black_radioButton->UseVisualStyleBackColor = true;
-			// 
-			// Green_radioButton
-			// 
-			this->Green_radioButton->AutoSize = true;
-			this->Green_radioButton->Location = System::Drawing::Point(164, 106);
-			this->Green_radioButton->Name = L"Green_radioButton";
-			this->Green_radioButton->Size = System::Drawing::Size(86, 17);
-			this->Green_radioButton->TabIndex = 9;
-			this->Green_radioButton->TabStop = true;
-			this->Green_radioButton->Text = L"GREEN(16x)";
-			this->Green_radioButton->UseVisualStyleBackColor = true;
+			this->WinningLotText_label->AutoSize = true;
+			this->WinningLotText_label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
+			this->WinningLotText_label->Location = System::Drawing::Point(332, 35);
+			this->WinningLotText_label->Name = L"WinningLotText_label";
+			this->WinningLotText_label->Size = System::Drawing::Size(115, 24);
+			this->WinningLotText_label->TabIndex = 11;
+			this->WinningLotText_label->Text = L"Winning lot";
 			// 
 			// Bet_button
 			// 
@@ -401,27 +360,68 @@ namespace CasinoWinForms {
 			this->Bet_button->UseVisualStyleBackColor = true;
 			this->Bet_button->Click += gcnew System::EventHandler(this, &CasinoMenu::Bet_button_Click);
 			// 
-			// WinningLotText_label
+			// Green_radioButton
 			// 
-			this->WinningLotText_label->AutoSize = true;
-			this->WinningLotText_label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->Green_radioButton->AutoSize = true;
+			this->Green_radioButton->Location = System::Drawing::Point(164, 106);
+			this->Green_radioButton->Name = L"Green_radioButton";
+			this->Green_radioButton->Size = System::Drawing::Size(86, 17);
+			this->Green_radioButton->TabIndex = 9;
+			this->Green_radioButton->TabStop = true;
+			this->Green_radioButton->Text = L"GREEN(16x)";
+			this->Green_radioButton->UseVisualStyleBackColor = true;
+			// 
+			// Black_radioButton
+			// 
+			this->Black_radioButton->AutoSize = true;
+			this->Black_radioButton->Location = System::Drawing::Point(14, 106);
+			this->Black_radioButton->Name = L"Black_radioButton";
+			this->Black_radioButton->Size = System::Drawing::Size(76, 17);
+			this->Black_radioButton->TabIndex = 8;
+			this->Black_radioButton->TabStop = true;
+			this->Black_radioButton->Text = L"BLACK(2x)";
+			this->Black_radioButton->UseVisualStyleBackColor = true;
+			// 
+			// Red_radioButton
+			// 
+			this->Red_radioButton->AutoSize = true;
+			this->Red_radioButton->Location = System::Drawing::Point(96, 106);
+			this->Red_radioButton->Name = L"Red_radioButton";
+			this->Red_radioButton->Size = System::Drawing::Size(62, 17);
+			this->Red_radioButton->TabIndex = 8;
+			this->Red_radioButton->TabStop = true;
+			this->Red_radioButton->Text = L"Red(2x)";
+			this->Red_radioButton->UseVisualStyleBackColor = true;
+			// 
+			// Choice_label
+			// 
+			this->Choice_label->AutoSize = true;
+			this->Choice_label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->WinningLotText_label->Location = System::Drawing::Point(332, 35);
-			this->WinningLotText_label->Name = L"WinningLotText_label";
-			this->WinningLotText_label->Size = System::Drawing::Size(98, 20);
-			this->WinningLotText_label->TabIndex = 11;
-			this->WinningLotText_label->Text = L"Winning lot";
+			this->Choice_label->Location = System::Drawing::Point(6, 74);
+			this->Choice_label->Name = L"Choice_label";
+			this->Choice_label->Size = System::Drawing::Size(298, 20);
+			this->Choice_label->TabIndex = 7;
+			this->Choice_label->Text = L"Choose the color you want to bet on";
 			// 
-			// WinningLot_label
+			// Bet_textBox
 			// 
-			this->WinningLot_label->AutoSize = true;
-			this->WinningLot_label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->Bet_textBox->Location = System::Drawing::Point(14, 51);
+			this->Bet_textBox->Name = L"Bet_textBox";
+			this->Bet_textBox->Size = System::Drawing::Size(137, 20);
+			this->Bet_textBox->TabIndex = 6;
+			this->Bet_textBox->Text = L"0";
+			// 
+			// Bet_label
+			// 
+			this->Bet_label->AutoSize = true;
+			this->Bet_label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->WinningLot_label->Location = System::Drawing::Point(360, 74);
-			this->WinningLot_label->Name = L"WinningLot_label";
-			this->WinningLot_label->Size = System::Drawing::Size(46, 31);
-			this->WinningLot_label->TabIndex = 12;
-			this->WinningLot_label->Text = L"__";
+			this->Bet_label->Location = System::Drawing::Point(6, 26);
+			this->Bet_label->Name = L"Bet_label";
+			this->Bet_label->Size = System::Drawing::Size(288, 20);
+			this->Bet_label->TabIndex = 5;
+			this->Bet_label->Text = L"Select the number of tokens to bet";
 			// 
 			// CasinoMenu
 			// 
@@ -459,5 +459,6 @@ private: System::Void CasinoMenu_Load(System::Object^ sender, System::EventArgs^
 private: System::Void CashToTokens_button_Click(System::Object^ sender, System::EventArgs^ e);
 private: System::Void TokensToCash_button_Click(System::Object^ sender, System::EventArgs^ e);
 private: System::Void Bet_button_Click(System::Object^ sender, System::EventArgs^ e);
+	   void UpdateInfo();
 };
 }

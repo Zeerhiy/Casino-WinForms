@@ -90,3 +90,13 @@ int Guest::GetGuestTokens()
 {
 	return this->tokens;
 }
+
+void Guest::AddGuestTokens(int tokens)
+{
+	 this->tokens += tokens;
+}
+
+void Guest::SubGuestTokens(int tokens)
+{
+	this->tokens -= tokens;
+}
